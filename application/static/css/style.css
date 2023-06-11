@@ -1,0 +1,279 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Nav Bar Section CSS Start */
+
+nav{
+   height: 10vh;
+   width: 5vw;
+   min-width: 100px;
+   align-items: center;
+   justify-content: space-between;
+   margin-left: 10px;
+}
+nav .container-fluid a {
+    position: relative;
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+nav .container-fluid a:after {
+    content: "";
+    position: absolute;
+    background-color: #60d5d5;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+nav .container-fluid a:hover {
+    color: darkslategray;
+}
+
+nav .container-fluid a:hover::after {
+    width: 100%;
+}
+
+/* Nav Bar Section CSS End */
+
+.team {
+/*    border: 1px solid orange;*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.column {
+    width: 50%;
+/*    border: 1px solid black; */
+    padding: 0.5em 0;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: #1f003b;
+}
+
+.card {
+    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #100000;
+
+}
+
+.card .img-container {
+    width: 8em;
+    height: 8em;
+    background-color: #a993ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto; 
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-weight: 500;
+}
+
+.card p {
+    font-weight: 300;
+    text-transform: lowercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+}
+
+.icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+}
+
+.card :hover {
+    background: linear-gradient();
+    color: #ffffff;
+}
+
+.card:hover .img-container {
+    transform: scale(1.15);
+}
+
+@media screen  and (min-width:768px) {
+    section{
+        padding: 1em 7em;
+    }
+}
+
+@media screen and (min-width:992px) {
+    section{
+        padding: 1em;
+    }    
+    .card {
+        padding: 5em 1em;
+    }
+    .column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 1em;
+    }
+}
+
+/* Footer Section CSS Start */
+
+footer {
+    background-color: rgb(26, 49, 46);
+    color: #fff;
+}
+
+.footer_info {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0;
+}
+
+.footer_info .footer_width {
+    padding: 0 15px;
+}
+
+footer .footer_info .footer_width h2:after {
+    content: "";
+    position: absolute;
+    background-color: lightslategray;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: 10px;
+    transition: 0.3s;
+}
+
+footer .footer_info .footer_width h2:hover {
+    color: sandybrown;
+}
+
+footer .footer_info .footer_width h2:hover:after {
+    width: 100%;
+}
+
+.footer_info h2 {
+    margin-bottom: 20px;
+}
+
+.project , .address {
+    width: 50%;
+}
+
+.link {
+    width: 20%;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media ul {
+    display: flex;
+}
+
+.social-media ul a {
+    display: inline-block;
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    padding-top: 12px;
+    background-color: transparent;
+    border: 1px solid #f34f03;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.social-media ul a:hover {
+    background-color: sandybrown;
+    color: #f3efef;
+}
+
+.link ul a {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.link ul a:hover {
+    color: #e4efef;
+}
+
+.contact ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact ul span{
+    margin-right: 15px;
+}
+
+.copy-right {
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media screen and (max-width:992px) {
+    
+    .about , .contact {
+        width: 35%;
+    }
+
+    .link {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .about , .contact , .link {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer_info {
+        flex-direction: column;
+    }
+}
+
+/* Footer Section CSS End */

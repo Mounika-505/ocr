@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<!---
+<html>
+    <head>
+        <style>
+            body{
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+              background-image: url({{url_for('static',filename = 'images/bg5.jp6g')}})
+            }
+        </style>
+    </head>-->
+
+<body style="background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #bdc3c7, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+<div class="justify-content-center mt-4">
+    <h4 style="font-family: 'Times New Roman', Times, serif; color: black;">Upload File To Get Translation</h4>
+</div>
+{{ dropzone.create(action='upload') }}
+{{ dropzone.load_js() }}
+{{ dropzone.config() }}
+</body>
+<!--</html>-->
+{% endblock %}
